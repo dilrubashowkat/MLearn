@@ -13,4 +13,7 @@ iris_flower = load_iris();
 print(iris_flower.feature_names);
 print(iris_flower.target_names);
 print(iris_flower.data[0]);
-print("end world");
+print("end world war");
+
+for i in range(len(iris_flower.target)):
+    print("Data ID %d: label %s, features %s" , i,iris_flower.target[i],iris_flower.data[i]);
