@@ -12,4 +12,5 @@ print("hello world");
 iris_flower = load_iris();
 print(iris_flower.feature_names);
 print(iris_flower.target_names);
+print(iris_flower.data[0]);
 print("end world");
