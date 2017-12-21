@@ -1,0 +1,8 @@
+1. install miniconda
+2. in the conda terminal install
+conda install numpy
+conda install spicy
+conda install scikit-learn
+
+check
+import scikit-learn
