@@ -36,13 +36,25 @@ print(test_target);
 print(clf.predict(test_data));
 
 import graphviz;
-dot_data = tree.export_graphviz(clf, out_file=None);
-graph = graphviz.Source(dot_data);
-graph.render("iris");
-dot_data = tree.export_graphviz(clf, out_file=None,
+#dot_data = tree.export_graphviz(clf, out_file=None);
+#graph = graphviz.Source(dot_data);
+#graph.render("iris");
+#dot_data = tree.export_graphviz(clf, out_file=None,
+#                         feature_names=iris.feature_names,
+#                         class_names=iris.target_names,
+#                         filled=True, rounded=True,
+#                         special_characters=True);
+#graph = graphviz.Source(dot_data);
+#graph.write_pdf("iris.pdf");
+from sklearn.externals.six import StringIO;
+#import pydot;
+dot_data = StringIO();
+dot_data = tree.export_graphviz(clf, out_file=dot_data,
                          feature_names=iris.feature_names,
                          class_names=iris.target_names,
                          filled=True, rounded=True,
                          special_characters=True);
 graph = graphviz.Source(dot_data);
+#graph.render(iris.pdf);
+#graph = pydot.graph_from_dot_data(dot_data.getvalue());
 graph.write_pdf("iris.pdf");
