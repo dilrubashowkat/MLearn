@@ -17,4 +17,14 @@ __________________________
 2. Then type 
 python filename.py
 3. done
-4. git update
+
+
+Git
+___________________________
+ls
+cd folder name
+git status
+git add .
+git commit -m "comment"
+git push origin master
+exit
