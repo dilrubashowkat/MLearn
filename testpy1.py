@@ -14,7 +14,7 @@ iris = load_iris();
 print(iris.feature_names);
 print(iris.target_names);
 print(iris.data[0]);
-print("end world");
+##print("end world");
 
 for i in range(len(iris.target)):
     print("Data ID %d: label %s, features %s" , i,iris.target[i],iris.data[i]);
